@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            function ktHT()
+            {
+                var value = $('#name').val();
+                var gt = /^([A-Z][a-z])*(\s[A-Z][a-z]*)*$/;
+                if(gt.test(value)==true)
+                {
+                    $('#tbTen').html("");
+                    return true;
+                }
+                else
+                {
+                    $('#tbTen').html("Bắt đầu bằng chữ in hoa và không để trống");
+                    return false;
+                }
+            }
+            $('#name').blur(ktHT);
+
+            function ktmail()
+            {
+                var valuemail = $('#mail').val();
+                var gtmail = /^\w*(@gmail.com)$/;
+                if(gtmail.test(valuemail)==true)
+                {
+                    $('#tbMail').html("");
+                    return true;
+                }
+                else
+                {
+                    $('#tbMail').html("Theo định dạng xxxxx@gmail.com và không để trống");
+                    return false;
+                }
+            }
+            $('#mail').blur(ktmail);
+
+            function ktsdt()
+            {
+                var valuesdt = $('#sdt').val();
+                var gtsdt = /^(0)[0-9]{3}(-)[0-9]{3}(-)[0-9]{3}$/;
+                if(gtsdt.test(valuesdt)==true)
+                {
+                    $('#tbSDT').html("");
+                    return true;
+                }
+                else
+                {
+                    $('#tbSDT').html("Dạng 0xxx-xxx-xxx và không để trống");
+                    return false;
+                }
+            }
+            $('#sdt').blur(ktsdt);
+
+            function ktlogin()
+            {
+                var valuelogin = $('#username').val();
+                var gtuser = /^\w+$/;
+                if(gtuser.test(valuelogin)==true)
+                {
+                    $('#tbLogin').html("");
+                    return true;
+                }
+                else
+                {
+                    $('#tbLogin').html("Sai định dạng và không để trống");
+                    return false;
+                }
+            }
+            $('#username').blur(ktlogin);
+
+            function ktpass()
+            {
+                var valuelogin = $('#password').val();
+                var gtuser = /^\w+$/;
+                if(gtuser.test(valuelogin)==true)
+                {
+                    $('#tbPass').html("");
+                    return true;
+                }
+                else
+                {
+                    $('#tbPass').html("Sai định dạng và không để trống");
+                    return false;
+                }
+            }
+            $('#password').blur(ktpass);
+
+            $('#btn').click(function() {
+                if (ktHT() && ktsdt() && ktmail() && ktlogin() && ktpass()) {
+                    alert("Đăng ký thành công");
+                    return true;
+                }
+                else
+                {
+                    alert('Đăng ký không thành công');
+                    return false;
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        <div class="hd1">
+            <div class="intro">
+                <h4 class="h4h">EAH Bike-Hệ Thống Bán Lẻ Xe Đạp Điện Toàn Quốc</h4>
+            </div>
+        </div>
+        <div class="hd2">
+            <ul>
+                <li><a href="../html/login.html">Đăng nhập</a></li>
+                <li><a href="../html/dk.html">Đăng kí</a></li>
+            </ul>
+    </div>
+        </header>
+        <div class="secondBG">
+            <div class="BGbig">
+                <div class="logo">
+                    <img class="lg" src="../img/EAH.png" alt="">
+                    <div class="textlg">
+                        <h3>EAH Bike</h3>
+                    </div>
+                </div>
+                <form action="/tim-kiem" onsubmit="return suggestSearch(event);" class="header__search">
+                    <input id="skw" type="text" class="input-search" onkeyup="suggestSearch(event);" placeholder="Bạn tìm gì..." name="key" autocomplete="off" maxlength="100">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="contact">
+                    <div class="call">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="a">
+                        <span>Gọi Mua Hàng</span>
+                        <p>0379 683 151</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../html/baitaplon.html">Trang Chủ</a></li>
+                <li><a href="../html/baitaplon.html">Sản Phẩm</a></li>
+                <li><a href="../html/gioithieu.html">Giới Thiệu</a></li>
+            </ul>
+        </nav>
+        <form action="#" method="post" id="frm-register">
+            <h1>Đăng ký</h1>
+            <input type="text" name="firstname" id="name" placeholder="Họ Tên">
+            <span id="tbTen" style="color: red;">*</span>
+            <input type="text" name="lastname" id="mail" placeholder="Email">
+            <span id="tbMail" style="color: red;">*</span>
+            <input type="text" name="lastname" id="sdt" placeholder="Số Điện Thoại">
+            <span id="tbSDT" style="color: red;">*</span>
+            <input type="text" name="username" id="username" placeholder="Tên đăng nhập">
+            <span id="tbLogin" style="color: red;">*</span>
+            <input type="text" name="password" id="password" placeholder="Mật khẩu">
+            <span id="tbPass" style="color: red;">*</span>
+            <button type="submit" id="btn">Đăng ký</button>
+            <p style="padding-top: 15px;">
+                Bạn đã có tài khoản?<a href="../html/login.html">Đăng nhập ngay</a>
+            </p>
+        </form>
+        <br><br><br><br><br><br><br><br><br>
+        <footer>
+			<div class="chung">
+                <div class="trai">
+                     <ul class="list-un">
+            <li>
+                <p>
+                        <a href="" title="Hệ thống cửa hàng Xe Điện Tốt">Hệ thống cửa hàng Xe Điện Tốt</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                        <a href="" title="Mua hàng từ xa">Mua hàng từ xa</a>
+                </p>
+            </li>
+    </ul>
+            <p>
+                <h4 style="margin-top: 10px;">Phương thức thanh toán</h4>                
+            </p>
+                    <div class="banner-methodpay">
+                        <div class="item banner-item banner-item-1">
+                            <a href="">
+                            <img src="https://xedientot.vn/images/banner/pttt-footer_6f0521f7.png" alt="PTTT-Footer" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h4>Kết nối cộng đồng</h4>
+                    <div class="banner-social">
+                                            <div class="item banner-item banner-item-1">
+            <a href="https://www.google.jp" target="_blank">
+                    <img src="https://xedientot.vn/images/banner/google_dfef7b4e.jpg" alt="google" />
+            </a>
+        </div>
+        <div class="item banner-item banner-item-2">
+            <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://xedientot.vn/images/banner/youtube_9296883d.jpg" alt="youtube" />
+            </a>
+        </div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <a class="statusBCT" href="http://online.gov.vn/Home/WebDetails/81261" target="_blank">
+                    </a>
+                </div>
+                <div class="giua">
+                        <h4 style="margin-top: 10px">Hỗ Trợ Khách Hàng</h4>
+                        <div class="sdt">
+                            0379.683.151 <br>
+                            0928.817.573
+                        </div>
+                        <div class="kn" style="margin-top: 20px;">
+                             <div>
+                                <h4>Khiếu nại,Bảo Hành:</h4>
+                             </div>
+                             <div style="color: #4a90e2;">
+                                0379.683.151
+                             </div>
+                        </div>
+                        <div class="pv" style="margin-top: 20px;">
+                            <h4>Thời gian phục vụ: 8h-22h</h4>
+                        </div>
+                        <div class="thoigianpv" style="margin-top :20px;">
+                            <h4>Email:nguyenan542003@gmail.com</h4>
+                        </div>
+                </div>
+                <div class="phai">
+                    <div class="phai22">
+                        <h4><a href="../html/gioithieu.html">About Us</a></h4>
+                    </div>
+                </div>
+            </div>
+    	</footer>
+        <div class="ficmnnal">
+				<p style="margin-top: 20px ; font-size: 17px; background-color: rgb(245, 245, 245); width:1200px">
+					© 2022 - 2025 Công Ty Cổ Phần Một thành viên. Địa chỉ: 102/141 Lê Văn Thọ Phường 11 Quận Gò Vấp TP.HCM /  
+					Email: nguyenan542003@gmail.com. Chịu trách nhiệm sản xuất nội dung: Nguyễn Hạnh Bảo Ân
+				</p>
+        </div>
+    </div>
+</body>
+</html>

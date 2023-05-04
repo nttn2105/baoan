@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Bán Xe Đạp Điện</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrapper
+        {
+            font-family: fontSSRegular,Arial;
+            max-width: 1440px;
+            margin: auto;
+            padding: 0px;
+        }
+        header
+        {
+            display: flex;
+            background-color: #004cc6;
+            width: 1440px;
+            justify-content: space-around;
+        }
+        .hd1
+        {
+            display: flex;
+            width: 50%;
+            padding: 10px 10px;
+            margin: 0px !important;
+        }
+        .hd2
+        {
+        
+            width: 45%;
+            padding: 10px 10px;
+        }
+        .h4h
+        {
+            color: #fff;
+        }
+        .hd2 ul
+        {
+            display: flex;  
+            justify-content: space-evenly;
+        }
+        .hd2 ul li 
+        {
+            list-style: none;
+        }
+        .hd2 ul li a
+        {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        .secondBG
+        {
+            background-color: #4a90e2;
+            width: 1440px;
+        }
+        .product-small {
+            width: 200px;
+            height: 350px;
+            margin: 15px;
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 1px 5px 10px silver;
+        }
+        .BGbig
+        {
+            display: flex;
+            width: 90%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .logo
+        {
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+        .lg
+        {
+        
+           width: 40%; 
+        }
+        .textlg
+        {
+            color: whitesmoke;
+        }
+        .header__search input {
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    height: 40px;
+    padding: 8px 8px 8px 13px;
+    width: calc(100% - 35px);
+        }   
+        .header__search button {
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 20px;
+            right: 10px;
+        }
+        .header__search {
+            position: relative;
+            width: 30%;
+            border-radius: 4px;
+            background-color: #fff;
+            height: fit-content;
+        }
+        nav
+        {
+            background-color: #4a90e2;
+            width: 1440px;
+        }
+        nav ul
+        {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        nav ul li
+        {
+            height: 30px;
+            text-align: center;
+        }
+        nav ul li a
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+        .contact
+        {
+            display: flex;
+            width: 30%;
+            justify-content: center;
+        }
+        .call
+        {
+            color: white;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        .a span
+        {
+            color: white;
+        }
+        .a p
+        {
+            color: yellow;
+            font-weight: bold;
+        }
+        .banner
+        {
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            padding-top: 15px;
+        }
+        .bn1
+        {
+            width: 700px;
+            border: 0px solid black;
+        }
+        .bn2
+        {
+            width: 80%;
+            height: 200px;
+            border: 0px solid black;
+        }
+        .bn3
+        {
+            width: 80%;
+            height: 200px;
+            border: 0px solid black;
+        }
+        .slide
+        {
+            width: 490px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bn22
+        {
+            height: 100%;
+            width: 100%;
+        }
+        footer
+        {
+            width: 1440px;
+            margin-top: 20px;
+            border-top: 1px solid gray;
+            padding-top: 10px;
+        }
+        .chung
+        {
+            width: 1440px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .list-un li
+        {
+            list-style: none;
+            margin: 10px ;
+        }
+        .list-un li a
+        {
+            text-decoration: none;
+            font-size: larger;
+            color: black;
+        }
+        .trai
+        {
+            width: 30%;
+        }
+        .banner-methodpay
+        {
+            width: 70%;
+        }
+        .banner-social
+        {
+            margin-top: 5px;
+            width: 50%;
+            display: flex;
+        }
+        .giua
+        {
+            width: 35%;
+        }
+        .sdt
+        {
+            padding-top: 30px;
+            width: 100%;
+            color:#4a90e2;
+        }
+        .kn
+        {
+            width: 100%;
+            display: flex;
+        }
+        .phai
+        {
+            width: 30%;
+        }
+        .phai h4 a
+        {
+            text-decoration: none;
+            color: black;
+        }
+        .phai h4
+        {
+            margin-top: 10px;
+        }
+        .ficmnnal
+        {
+            width: 1440px;
+        }
+        article
+        {
+            max-width: 1200px;
+            padding-top: 10px;
+            margin: auto;
+        }
+        .lon
+        {
+            width: 1200px;
+            display: flex;
+        }
+        aside
+        {
+            width: 250px;
+        }
+        .card
+        {
+            background-color: rgb(223, 220, 220);
+            padding: 15px 5px;
+            border: 1px solid rgb(199, 174, 174);
+        }
+        .card-body li
+        {
+            padding: 5px 10px;
+        }
+        .content
+        {
+            width: 950px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-small {
+            width: 250px;
+            height: 350px;
+            margin: 15px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            box-shadow: 1px 5px 10px silver;
+        }
+        .image-none a {
+            text-decoration: none;
+            color: #222222;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .hinhanhsanpham
+        {
+            height: 166px;
+            width: 250px;
+        }
+        .sanchung
+        {
+            padding: 10px 15px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        <div class="hd1">
+            <div class="intro">
+                <h4 class="h4h">EAH Bike-Hệ Thống Bán Lẻ Xe Đạp Điện Toàn Quốc</h4>
+            </div>
+        </div>
+        <div class="hd2">
+            <ul>
+                <li><a href="../html/login.html">Đăng nhập</a></li>
+                <li><a href="../html/dk.html">Đăng kí</a></li>
+            </ul>
+    </div>
+        </header>
+        <div class="secondBG">
+            <div class="BGbig">
+                <div class="logo">
+                    <img class="lg" src="../img/EAH.png" alt="">
+                    <div class="textlg">
+                        <h3>EAH Bike</h3>
+                    </div>
+                </div>
+                <form action="/tim-kiem" onsubmit="return suggestSearch(event);" class="header__search">
+                    <input id="skw" type="text" class="input-search" onkeyup="suggestSearch(event);" placeholder="Bạn tìm gì..." name="key" autocomplete="off" maxlength="100">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="contact">
+                    <div class="call">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="a">
+                        <span>Gọi Mua Hàng</span>
+                        <p>0379 683 151</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../html/baitaplon.html">Trang Chủ</a></li>
+                <li><a href="../html/baitaplon.html">Sản Phẩm</a></li>
+                <li><a href="../html/gioithieu.html">Giới Thiệu</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <div class="bn1">
+                <img src="../img/giaohang.jpg" class="bn22">
+            </div>
+            <div class="slide">
+                <div class="bn2">
+                    <img src="../img/gop0.jpg" alt="" class="bn22">
+                </div>
+                <div class="bn3">
+                    <img src="../img/8trieu.jpg" alt="" class="bn22">
+                </div>
+            </div>
+        </div>
+        <article>
+            <div class="lon">
+                <aside>
+                    <div class="card">
+                        <h4>
+                            <a  style="text-decoration: none; color:black;" data-toggle="collapse" href="#collapse-brand" aria-expanded="true" aria-controls="collapse-brand">
+                            Hãng xe
+                            <i class="fa fa-angle-down"></i>
+                            </a>
+                        </h4>    
+                    </div>
+                    <div style="border: 1px solid rgb(199, 174, 174);" id="collapse-brand" class="collapse show" aria-labelledby="cardBrandHeader" data-parent="#accordion-brand">
+                        <div class="card-body">
+                            <ul style="list-style: none;">
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="dkbike" name="brand">
+                                            DKBike
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="giant" name="brand">
+                                            Giant
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="arena" name="brand">
+                                            Arena
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="jvc" name="brand">
+                                            JVC
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="yadea" name="brand">
+                                            Yadea
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="xiaomi" name="brand">
+                                            Xiaomi
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="samurai" name="brand">
+                                            Samurai
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="nijia" name="brand">
+                                            Nijia
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="pega" name="brand">
+                                            Pega
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="burke" name="brand">
+                                            Burke
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="lihaze" name="brand">
+                                            Lihaze
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="dyu" name="brand">
+                                            DYU
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="g-force" name="brand">
+                                            G-Force
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="osakar" name="brand">
+                                            Osakar
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="nike-bike" name="brand">
+                                            Nike Bike
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="theli" name="brand">
+                                            Theli
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="dylexe" name="brand">
+                                            Dylexe
+                                        </label>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="content">
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/ninabike.html" >
+                                <img class="hinhanhsanpham" src="../img/nina-do.jpg" > 
+                                <div class="sanchung">
+                                <p>Xe Đạp Điện Nijia Cap A - Đèn hậu LED</p>
+                                <p>Giá Bán: <p style="color: red;">11.900.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/xiaomi.html" >
+                                <img class="hinhanhsanpham" src="../img/xiaomi.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Xiaomi E80C</p>
+                                <p>Giá Bán: <p style="color: red;">18.900.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/osakaralphas.html" >
+                                <img class="hinhanhsanpham" src="../img/xe-dap-dien-osakar-alpha-s_bac8af15.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Osakar Alpha S</p>
+                                <p>Giá Bán: <p style="color: red;">13.900.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/giant.html" >
+                                <img class="hinhanhsanpham" src="../img/giantxe.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Giant 133M</p>
+                                <p>Giá Bán: <p style="color: red;">8.900.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/dkbike.html" >
+                                <img class="hinhanhsanpham" src="../img/dkxengang.png" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Giant DK Samurai III</p>
+                                <p>Giá Bán: <p style="color: red;">15.900.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/pega.html" >
+                                <img class="hinhanhsanpham" src="../img/pegaxe.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Pega Zinger+</p>
+                                <p>Giá Bán: <p style="color: red;">12.500.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/jvc.html" >
+                                <img class="hinhanhsanpham" src="../img/nike1.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Nike Bike Go Pro</p>
+                                <p>Giá Bán: <p style="color: red;">10.990.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/bomelli.html" >
+                                <img class="hinhanhsanpham" src="../img/bomelli.jpg" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện Bomelli BC 18F</p>
+                                <p>Giá Bán: <p style="color: red;">9.500.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-small ">
+                        <div class="image-none ">
+                            <a href="../html/nike.html" >
+                                <img class="hinhanhsanpham" src="../img/jvcg10xe.png" >
+                                <div class="sanchung">
+                                    <p>Xe Đạp Điện JVC G10 One</p>
+                                <p>Giá Bán: <p style="color: red;">10.290.000 VND</p></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+			<div class="chung">
+                <div class="trai">
+                     <ul class="list-un">
+            <li>
+                <p>
+                        <a href="" title="Hệ thống cửa hàng Xe Điện Tốt">Hệ thống cửa hàng Xe Điện Tốt</a>
+                </p>
+            </li>
+            <li>
+                <p>
+                        <a href="" title="Mua hàng từ xa">Mua hàng từ xa</a>
+                </p>
+            </li>
+    </ul>
+            <p>
+                <h4 style="margin-top: 10px;">Phương thức thanh toán</h4>                
+            </p>
+                    <div class="banner-methodpay">
+                        <div class="item banner-item banner-item-1">
+                            <a href="">
+                            <img src="https://xedientot.vn/images/banner/pttt-footer_6f0521f7.png" alt="PTTT-Footer" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <h4>Kết nối cộng đồng</h4>
+                    <div class="banner-social">
+                                            <div class="item banner-item banner-item-1">
+            <a href="https://www.google.jp" target="_blank">
+                    <img src="https://xedientot.vn/images/banner/google_dfef7b4e.jpg" alt="google" />
+            </a>
+        </div>
+        <div class="item banner-item banner-item-2">
+            <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://xedientot.vn/images/banner/youtube_9296883d.jpg" alt="youtube" />
+            </a>
+        </div>
+
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <a class="statusBCT" href="http://online.gov.vn/Home/WebDetails/81261" target="_blank">
+                    </a>
+                </div>
+                <div class="giua">
+                        <h4 style="margin-top: 10px">Hỗ Trợ Khách Hàng</h4>
+                        <div class="sdt">
+                            0379.683.151 <br>
+                            0928.817.573
+                        </div>
+                        <div class="kn" style="margin-top: 20px;">
+                             <div>
+                                <h4>Khiếu nại,Bảo Hành:</h4>
+                             </div>
+                             <div style="color: #4a90e2;">
+                                0379.683.151
+                             </div>
+                        </div>
+                        <div class="pv" style="margin-top: 20px;">
+                            <h4>Thời gian phục vụ: 8h-22h</h4>
+                        </div>
+                        <div class="thoigianpv" style="margin-top :20px;">
+                            <h4>Email:nguyenan542003@gmail.com</h4>
+                        </div>
+                </div>
+                <div class="phai">
+                    <div class="phai22">
+                        <h4><a href="../html/gioithieu.html">About Us</a></h4>
+                    </div>
+                </div>
+            </div>
+    	</footer>
+        <div class="ficmnnal">
+				<p style="margin-top: 20px ; font-size: 17px; background-color: rgb(245, 245, 245); width:1200px">
+					© 2022 - 2025 Công Ty Cổ Phần Một thành viên. Địa chỉ: 102/141 Lê Văn Thọ Phường 11 Quận Gò Vấp TP.HCM /  
+					Email: nguyenan542003@gmail.com. Chịu trách nhiệm sản xuất nội dung: Nguyễn Hạnh Bảo Ân
+				</p>
+        </div>
+    </div>
+</body>
+</html>

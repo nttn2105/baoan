@@ -1,0 +1,393 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper
+{
+    font-family: fontSSRegular,Arial;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px;
+}
+.content .content-thongtin .about{
+    margin: 0px 0px 0px 100px;
+    border-left:1px solid #ffc809 ;
+    width: 70%;
+}
+.content .content-thongtin .about h2{
+    padding-top: 20px;
+    color: #ffc809;
+    margin-left: 10px;
+}
+.content .content-thongtin .about .infor p{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.content .content-thongtin{
+    display: flex;
+    margin-top: 20px;
+}
+.content .content-thongtin .img{
+    margin: 0px;
+    width: 18%;
+    margin-left: 20px;
+}
+.content .content-thongtin img{
+    max-width: 100%;
+    height: 280px;
+    border-radius: 50%;
+    margin-left:0px ;
+}
+.content .content-thongtin  h3{
+    color: #b5411d;
+    font-size: 22px;
+}
+header
+{
+    display: flex;
+    background-color: #004cc6;
+    width: 1440px;
+    justify-content: space-around;
+}
+.hd1
+{
+    display: flex;
+    width: 50%;
+    padding: 10px 10px;
+    margin: 0px !important;
+}
+.hd2
+{
+
+    width: 45%;
+    padding: 10px 10px;
+}
+.h4h
+{
+    color: #fff;
+}
+.hd2 ul
+{
+    display: flex;  
+    justify-content: space-evenly;
+}
+.hd2 ul li 
+{
+    list-style: none;
+}
+.hd2 ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.secondBG
+{
+    background-color: #4a90e2;
+    width: 1440px;
+}
+.BGbig
+{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+.lg
+{
+
+   width: 40%; 
+}
+.textlg
+{
+    color: whitesmoke;
+}
+.product-small {
+    width: 200px;
+    height: 350px;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px silver;
+}
+#gioi-thieu-san-pham img
+{
+    width: 600px;
+    height: 400px;
+}
+.header__search input {
+background-color: #fff;
+border: none;
+border-radius: 4px;
+font-size: 12px;
+line-height: 14px;
+height: 40px;
+padding: 8px 8px 8px 13px;
+width: calc(100% - 35px);
+}   
+.header__search button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+.header__search {
+    position: relative;
+    width: 30%;
+    border-radius: 4px;
+    background-color: #fff;
+    height: fit-content;
+}
+nav
+{
+    background-color: #4a90e2;
+    width: 1440px;
+}
+nav ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li
+{
+    height: 30px;
+    text-align: center;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.contact
+{
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+.call
+{
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.a span
+{
+    color: white;
+}
+.a p
+{
+    color: yellow;
+    font-weight: bold;
+}
+.banner
+{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding-top: 15px;
+}
+.bn1
+{
+    width: 700px;
+    border: 0px solid black;
+}
+.bn2
+{
+    width: 80%;
+    height: 200px;
+    border: 0px solid black;
+}
+.bn3
+{
+    width: 80%;
+    height: 200px;
+    border: 0px solid black;
+}
+.slide
+{
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bn22
+{
+    height: 100%;
+    width: 100%;
+}
+footer
+{
+    width: 1440px;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+.chung
+{
+    width: 1440px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list-un li
+{
+    list-style: none;
+    margin: 10px ;
+}
+.list-un li a
+{
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+}
+.trai
+{
+    width: 30%;
+}
+.banner-methodpay
+{
+    width: 70%;
+}
+.banner-social
+{
+    margin-top: 5px;
+    width: 50%;
+    display: flex;
+}
+.giua
+{
+    width: 35%;
+}
+.sdt
+{
+    padding-top: 30px;
+    width: 100%;
+    color:#4a90e2;
+}
+.kn
+{
+    width: 100%;
+    display: flex;
+}
+.phai
+{
+    width: 30%;
+}
+.phai h4 a
+{
+    text-decoration: none;
+    color: black;
+}
+.phai h4
+{
+    margin-top: 10px;
+}
+.ficmnnal
+{
+    width: 1440px;
+}
+article
+{
+    max-width: 1200px;
+    padding-top: 10px;
+    margin: auto;
+}
+.lon
+{
+    width: 1200px;
+    display: flex;
+}
+aside
+{
+    width: 250px;
+}
+.card
+{
+    background-color: rgb(223, 220, 220);
+    padding: 15px 5px;
+    border: 1px solid rgb(199, 174, 174);
+}
+.card-body li
+{
+    padding: 5px 10px;
+}
+#frm-login {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    max-width: 1200px;
+    height: 500px;
+    background-color: white;
+    padding: 20px;
+    margin: 100px auto;
+}
+
+#frm-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    box-shadow: 0px 10px 20px white;
+    border-radius: 5px;
+    max-width: 1200px;
+    height: 500px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+#frm-login input {
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+#frm-register input {
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+#frm-login button {
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+    background-color:#4a90e2;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    border: #fff;
+}
+
+#frm-register button {
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    border: #fff;
+}
+
+#frm-login button:hover {
+    background-color: #222222;
+}
+
+#frm-register button:hover {
+    background-color: #222222;
+}
